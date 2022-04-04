@@ -2,20 +2,6 @@ import "./App.css";
 import React, { Component } from "react";
 import "./FilteredList.js";
 import FilteredList from "./FilteredList";
-
-const express = require("express");
-const bodyParser = require("body-parser");
-const app = express();
-
-app.listen(3000, () => {
-  console.log("Apppcation started and pstening on port 3000");
-});
-
-app.use(bodyParser.urlencoded({ extended: true }));
-
-app.get("/", (req, res) => {
-  res.sendFile(__dirname + "/index.html");
-});
 export default class App extends Component {
   constructor(props) {
     super(props);
